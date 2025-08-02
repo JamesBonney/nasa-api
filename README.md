@@ -9,11 +9,6 @@
     * [React Query](#react-query)
 
 
-
-
-
-
-
 ## Setup
 
 ### Github
@@ -38,10 +33,18 @@ Typescript (included in Vite template setup)
 
 ### Material UI
 Material UI for the component library
+```
+> npm install @mui/material @emotion/react @emotion/styled
+> npm install @fontsource/roboto
+> npm install @mui/icons-material
+```
 
 ### React Query
 TanStack’s React Query for API calls and management
-
+```
+> npm install @tanstack/react-query
+> npm install -D @tanstack/eslint-plugin-query
+```
 
 
 
