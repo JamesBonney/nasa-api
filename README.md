@@ -47,6 +47,9 @@ TanStack’s React Query for API calls and management
 ```
 
 
+Selected NASA APIs
+Mars Rover Photos
+NASA Image and Video Library
 
 
 # React + TypeScript + Vite
