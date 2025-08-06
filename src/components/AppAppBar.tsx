@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from 'react-router';
 import { styled, alpha } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import AppBar from '@mui/material/AppBar';
@@ -12,7 +13,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
 import nasaLogo from '../assets/NASA.svg';
-import { useNavigate } from 'react-router';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -31,6 +31,7 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 }));
 
 const StyledLogo = styled('img')(() => ({
+  cursor: 'pointer',
   height: '34px',
   width: 'auto',
 }));
@@ -59,14 +60,14 @@ export default function AppAppBar() {
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
             <StyledLogo src={nasaLogo} alt="NASA logo" onClick={() => navigate('/')} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Button variant="text" color="info" size="small" onClick={() => navigate('/sample1')}>
-                Sample 1
+              <Button variant="text" color="info" size="small" onClick={() => navigate('/marsRoverPhotos')}>
+                Mars Rover Photos
               </Button>
-              <Button variant="text" color="info" size="small" onClick={() => navigate('/sample2')}>
-                Sample 2
+              <Button variant="text" color="info" size="small" onClick={() => navigate('/formValidation')}>
+                Form Validation
               </Button>
-              <Button variant="text" color="info" size="small" onClick={() => navigate('/sample1')}>
-                Sample 3
+              <Button variant="text" color="info" size="small" onClick={() => navigate('/loadingAndErrors')}>
+                Loading &amp; Errors
               </Button>
             </Box>
           </Box>
@@ -106,9 +107,9 @@ export default function AppAppBar() {
                   </IconButton>
                 </Box>
 
-                <MenuItem onClick={() => navigate('/sample1')}>Sample 1</MenuItem>
-                <MenuItem onClick={() => navigate('/sample2')}>Sample 2</MenuItem>
-                <MenuItem onClick={() => navigate('/sample1')}>Sample 3</MenuItem>
+                <MenuItem onClick={() => navigate('/marsRoverPhotos')}>Mars Rover Photos</MenuItem>
+                <MenuItem onClick={() => navigate('/formValidation')}>Form Validation</MenuItem>
+                <MenuItem onClick={() => navigate('/loadingAndErrors')}>Loading &amp; Errors</MenuItem>
               </Box>
             </Drawer>
           </Box>

@@ -2,8 +2,9 @@ import { Routes, Route } from "react-router";
 import CssBaseline from '@mui/material/CssBaseline';
 import AppTheme from './theme/AppTheme';
 import Home from './components/Home';
-import Sample1 from './components/Sample1';
-import Sample2 from './components/Sample2';
+import MarsRoverPhotos from './components/marsRoverPhotos';
+import FormValidation from './components/formValidation';
+import LoadingAndErrors from './components/loadingAndErrors';
 import MainLayout from './layouts/MainLayout';
 
 export default function App(props: { disableCustomTheme?: boolean }) {
@@ -14,8 +15,9 @@ export default function App(props: { disableCustomTheme?: boolean }) {
       <Routes>
         <Route element={<MainLayout />}>
           <Route index element={<Home />} />
-          <Route path="sample1" element={<Sample1 />} />
-          <Route path="sample2" element={<Sample2 />} />
+          <Route path="marsRoverPhotos" element={<MarsRoverPhotos />} />
+          <Route path="formValidation" element={<FormValidation />} />
+          <Route path="loadingAndErrors" element={<LoadingAndErrors />} />
         </Route>
       </Routes>
     </AppTheme>
